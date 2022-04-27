@@ -1,5 +1,7 @@
 body {
   font-family: Arial;
+  background-color: #141D2F;
+  color: white;
 }
 
 * {
@@ -36,3 +38,39 @@ form.example::after {
   clear: both;
   display: table;
 }
+
+/* Latout*/
+
+
+.top-section {
+   display: flex;
+   justify-content: space-between;
+   max-width: 730px;
+   margin: 0 auto;
+   padding-top: 10px;
+}
+
+#dark-light-mode {
+    margin-top: 25px;
+}
+
+#search-user
+
+
+.container-one {
+    background-color: pink;
+    height: 8vh;
+    max-width: 730px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.container-two {
+    background-color: #1E2A47;
+    height: 100vh;
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+
+

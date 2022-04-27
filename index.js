@@ -24,16 +24,22 @@ fetch('https://api.github.com/users/'+updatedSearch)
       if( updatedSearch == data.login) {
       let renderElments = document.getElementById("main")
       renderElments.innerHTML = `
-                <h1>${data.login}</h1>
-                <img src="${data.avatar_url}">
-                <p>${data.bio}</p>
-                <p>${data.created_at}</p>
-                <p>${data.public_repos}</p>
-                <p>${data.followers}</p>
-                <p>${data.following}</p>
-                <p>${data.location}</p>
-                <p>${data.blog}</p>
-                <p>${data.html_url}</p>
+               <div class="user-profile-info1">
+                    <img src="${data.avatar_url}">
+                    <h1>${data.login}</h1>
+                    <p>${data.bio}</p>
+                    <p>${data.created_at}</p>
+                </div>
+                <div class="user-profile-info2">
+                    <p>${data.public_repos}</p>
+                    <p>${data.followers}</p>
+                    <p>${data.following}</p>
+                </div>
+                <div class="user-profile-info2">
+                    <p>${data.location}</p>
+                    <p>${data.blog}</p>
+                    <p>${data.html_url}</p>
+                </div>
       `
     } else {
                 alert("NO USER FOUND")
