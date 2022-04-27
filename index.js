@@ -3,6 +3,12 @@
 let formInput = document.getElementById("formInput")
 
 
+
+
+function renderContent() {
+
+}
+
 // event listener, listining for a submit
 formInput.addEventListener('submit', function(e){
     e.preventDefault() // prevent being directed to another page
@@ -17,7 +23,23 @@ fetch('https://api.github.com/users/'+updatedSearch)
   .then(response => response.json())
   .then(data => {
       console.log(data)
-      document.getElementById("user-name").innerHTML = `
+      const renderElments = document.getElementById("main")
+      renderElments.innerHTML = `
+                <h1>${data.login}</h1>
+                <img src="${data.avatar_url}">
+                <p>${data.bio}</p>
+                <p>${data.created_at}</p>
+                <p>${data.public_repos}</p>
+                <p>${data.followers}</p>
+                <p>${data.following}</p>
+                <p>${data.location}</p>
+                <p>${data.blog}</p>
+                <p>${data.html_url}</p>
+      `
+
+
+
+      /*document.getElementById("user-name").innerHTML = `
       <h1>${data.login}</h1>
       `
       document.getElementById("user-img").innerHTML = `
@@ -53,7 +75,7 @@ fetch('https://api.github.com/users/'+updatedSearch)
 
       document.getElementById("user-github-link").innerHTML = `
       <p>${data.html_url}</p>
-      `
+      `*/
 
 
   });
